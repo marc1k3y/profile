@@ -44,8 +44,11 @@ export default function Footer() {
                     <img src={StackOF} alt="stack overflow" />
                 </a>
             </div>
-            <div className={css.copyright}>
+            <div className={css.copyrightDesktop}>
                 © Copyrigh 2022 Marc1k3y
+            </div>
+            <div className={css.copyrightMobile}>
+                © 2022 Marc1k3y
             </div>
         </div>
     )

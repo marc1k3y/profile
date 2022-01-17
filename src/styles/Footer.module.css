@@ -8,6 +8,17 @@
     border-top: 2px solid black;
 }
 
+.btn a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.btn a:hover {
+    text-decoration: underline;
+}
+
+
 .socialLinks {
     display: flex;
     justify-content: center;
@@ -16,14 +27,27 @@
 }
 
 .socialLinks img {
-    height: 2rem;
+    height: 1.5rem;
 }
 
-.btn a {
-    text-decoration: none;
-    font-weight: bold;
+.copyrightMobile {
+    display: none;
 }
 
-.btn a:hover {
-    text-decoration: underline;
+@media only screen and (max-width: 800px) {
+    .socialLinks {
+        gap: 1rem;
+    }
+
+    .socialLinks img {
+        height: 1rem;
+    }
+
+    .copyrightDesktop {
+        display: none;
+    }
+
+    .copyrightMobile {
+        display: flex;
+    }
 }
