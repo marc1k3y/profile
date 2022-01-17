@@ -1,21 +1,17 @@
 import React from "react"
-import css from "../styles/Welcome.module.css"
+import css from "../styles/Footer.module.css"
 import Github from "../assets/social-link/github.svg"
 import Twitter from "../assets/social-link/twitter.svg"
 import StackOF from "../assets/social-link/sof.svg"
 import Tg from "../assets/social-link/tg.svg"
 // import Gmail from "../assets/social-link/gmail.svg"
 
-export default function Welcome() {
+export default function Footer() {
     return (
         <div className={css.wrapper}>
-            <h1 className={css.desktopHeader}>
-                Hello.
-            </h1>
-            <h1 className={css.mobileHeader}>
-                Hi.
-            </h1>
-            <h2>this coder profile</h2>
+            <div className={css.btn}>
+                <a href="#header">On top</a>
+            </div>
             <div className={css.socialLinks}>
                 <a
                     href="https://t.me/marc1k3y"
@@ -47,6 +43,9 @@ export default function Welcome() {
                     rel="noreferrer">
                     <img src={StackOF} alt="stack overflow" />
                 </a>
+            </div>
+            <div className={css.copyright}>
+                © Copyrigh 2022 Marc1k3y
             </div>
         </div>
     )

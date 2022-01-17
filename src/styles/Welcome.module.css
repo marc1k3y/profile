@@ -1,6 +1,5 @@
 .wrapper {
     height: 100vh;
-    /* margin-top: 10vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,6 +7,10 @@
     background-color: white;
     color: black;
     font-family: monospace;
+}
+
+.mobileHeader {
+    display: none;
 }
 
 .wrapper>h1 {
@@ -26,11 +29,19 @@
 
 /* mobile version */
 @media only screen and (max-width: 800px) {
+    .desktopHeader {
+        display: none;
+    }
+
+    .mobileHeader {
+        display: flex;
+    }
+
     .wrapper {
         padding: 13rem 0;
     }
     .wrapper>h1 {
-        font-size: 7rem;
+        font-size: 13rem;
     }
     .socialLinks {
         padding-top: 3rem;
