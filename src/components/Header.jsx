@@ -7,7 +7,7 @@ export default function Header() {
             <div className={css.navbar}>
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
-                <a href="#">Works</a>
+                {/* <a href="#">Works</a> */}
             </div>
             <div className={css.title}>
                 profile
