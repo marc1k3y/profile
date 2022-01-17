@@ -1,0 +1,38 @@
+.wrapper {
+    height: 100vh;
+    /* margin-top: 10vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    font-family: monospace;
+}
+
+.wrapper>h1 {
+    font-size: 20rem;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 1rem;
+}
+
+.socialLinks img {
+    width: 3rem;
+    padding-top: 1rem;
+}
+
+/* mobile version */
+@media only screen and (max-width: 800px) {
+    .wrapper {
+        padding: 13rem 0;
+    }
+    .wrapper>h1 {
+        font-size: 7rem;
+    }
+    .socialLinks {
+        padding-top: 3rem;
+    }
+}

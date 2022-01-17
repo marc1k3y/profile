@@ -1,0 +1,49 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: url("../assets/iam.jpg") no-repeat top center;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+
+
+.wrapper>h1 {
+    margin-top: 2rem;
+    font-size: 5rem;
+}
+
+.text {
+    font-size: 2rem;
+}
+
+.wrapper>h1, .text {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0.3rem;
+}
+
+/* mobile version */
+@media only screen and (max-width: 800px) {
+    /* why 93???? */
+    .wrapper {
+        height: 93vh;
+    }
+    .wrapper>h1 {
+        margin-top: auto;
+        font-size: 3rem;
+    }
+
+    .wrapper>h1, .text {
+        text-align: right;
+        padding-right: 1rem;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100vw;
+    }
+
+    .text {
+        font-size: 1rem;
+        margin-bottom: 2vh;
+    }
+}
