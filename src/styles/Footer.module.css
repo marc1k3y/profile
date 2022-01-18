@@ -8,16 +8,25 @@
     border-top: 2px solid black;
 }
 
+.btn {
+    display: inline;
+    position: fixed;
+    bottom: 11%;
+    right: 1%;
+    background-color: lightgray;
+    padding: 0.5rem;
+    border-radius: 5%
+}
+
 .btn a {
     text-decoration: none;
     font-weight: bold;
-    color: black;
+    color: white;
 }
 
-.btn a:hover {
-    text-decoration: underline;
+.btn:hover {
+    background-color: black;
 }
-
 
 .socialLinks {
     display: flex;
@@ -30,17 +39,25 @@
     height: 1.5rem;
 }
 
+.copyrightDesktop, .copyrightMobile {
+    font-family: monospace;
+}
+
 .copyrightMobile {
     display: none;
 }
 
 @media only screen and (max-width: 800px) {
+    .btn {
+        background-color: black;
+    }
+
     .socialLinks {
         gap: 1rem;
     }
 
     .socialLinks img {
-        height: 1rem;
+        height: 1.5rem;
     }
 
     .copyrightDesktop {
@@ -49,5 +66,6 @@
 
     .copyrightMobile {
         display: flex;
+        font-family: monospace;
     }
 }

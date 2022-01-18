@@ -15,8 +15,8 @@
     font-family: monospace;
     font-size: 1.5rem;
     background-color: white;
-    padding: 0.2em;
-    /* padding-right: 1rem; */
+    padding: 0.2rem;
+    padding-right: 1rem;
 }
 
 .navbar {
@@ -29,6 +29,7 @@
     text-decoration: none;
     color: white;
     font-family: monospace;
+    font-size: 1.2rem;
 }
 
 .navbar a:hover {
