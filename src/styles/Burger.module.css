@@ -26,6 +26,7 @@
     border: 2px solid black;
     border-radius: 5%;
     text-align: right;
+    background-color: white;
 }
 
 .hidden a {
