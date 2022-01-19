@@ -5,7 +5,7 @@ import Welcome from "./components/Welcome"
 import About from "./components/About"
 import Skills from "./components/Skills"
 import Footer from "./components/Footer"
-// import EmailForm from "./components/EmailForm"
+import EmailForm from "./components/EmailForm"
 
 export default function App() {
 	return (
@@ -14,7 +14,7 @@ export default function App() {
 			<Welcome />
 			<About />
 			<Skills />
-			{/* <EmailForm /> */}
+			<EmailForm />
 			<Footer />
 		</div>
 	)

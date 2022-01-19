@@ -1,63 +1,70 @@
 import React, { useState } from "react"
-import axios from "axios"
+import { send } from "emailjs-com"
+import css from "../styles/EmailForm.module.css"
 
 export default function EmailForm() {
-    const [form, setForm] = useState({
-        name: "",
-        email: "",
-        message: ""
+    const [toSend, setToSend] = useState({
+        from_name: '',
+        to_name: 'Marck',
+        message: '',
+        reply_to: '',
     })
 
-    const resetForm = () => {
-        setForm({ name: "", email: "", message: "" })
+    const handleChange = (e) => {
+        setToSend({ ...toSend, [e.target.name]: e.target.value })
     }
 
-    const handleSubmit = (e) => {
+    const onSubmit = (e) => {
         e.preventDefault()
-        axios({
-            method: "POST",
-            url: "http://localhost:3002/send",
-            data: form
-        }).then((response) => {
-            if (response.data.status === "success") {
-                console.log("Message Sent.")
-                resetForm()
-            } else if (response.data.status === "fail") {
-                console.log("Message failed to send.")
-            }
-        })
+        send(
+            'service_vnkr5bu',
+            'template_7vbhaio',
+            toSend,
+            'user_x0Z66RspzE2Gvkh1TsUk1'
+        )
+            .then((response) => {
+                alert("I will definitelly answer!")
+                console.log('SUCCESS!', response.status, response.text)
+            })
+            .catch((err) => {
+                console.log('FAILED...', err)
+            })
     }
 
     return (
-        <form id="contact-form"
-            onSubmit={e => handleSubmit(e)}
-            method="POST">
-            <div className="form-group">
-                <label htmlFor="name">Name</label>
+        <div className={css.wrapper} id="email-form">
+            <form onSubmit={onSubmit}>
+                <h1>Contact with me</h1>
                 <input
-                    value={form.name}
-                    onChange={e => setForm(form => ({ ...form, name: e.target.value }))}
-                    type="text"
-                    className="form-control" />
-            </div>
-            <div className="form-group">
-                <label htmlFor="exampleInputEmail1">Email address</label>
+                    type='text'
+                    name='from_name'
+                    placeholder='from name'
+                    value={toSend.from_name}
+                    onChange={handleChange}
+                />
                 <input
-                    value={form.email}
-                    onChange={e => setForm(form => ({ ...form, email: e.target.value }))}
-                    type="email"
-                    className="form-control"
-                    aria-describedby="emailHelp" />
-            </div>
-            <div className="form-group">
-                <label htmlFor="message">Message</label>
-                <textarea
-                    value={form.message}
-                    onChange={e => setForm(form => ({ ...form, message: e.target.value }))}
-                    className="form-control"
-                    rows="5"></textarea>
-            </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
-        </form>
+                    type='text'
+                    name='to_name'
+                    placeholder='to name'
+                    value={toSend.to_name}
+                    onChange={handleChange}
+                />
+                <input
+                    type='text'
+                    name='message'
+                    placeholder='Your message'
+                    value={toSend.message}
+                    onChange={handleChange}
+                />
+                <input
+                    type='text'
+                    name='reply_to'
+                    placeholder='Your email'
+                    value={toSend.reply_to}
+                    onChange={handleChange}
+                />
+                <button type='submit'>Submit</button>
+            </form>
+        </div>
     )
 }
