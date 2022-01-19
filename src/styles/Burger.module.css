@@ -1,0 +1,40 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 50px;
+    position: fixed;
+    right: 1%;
+    top: 11%;
+    z-index: 999;
+}
+
+.burger>button {
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-radius: 10%;
+}
+
+.hidden {
+    display: none;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 5%;
+    text-align: right;
+}
+
+.hidden a {
+    text-decoration: none;
+    color: black;
+    padding: 0.3rem;
+}
+
+.hidden a:hover {
+    background-color: black;
+    color: white;
+}

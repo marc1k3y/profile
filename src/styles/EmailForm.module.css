@@ -27,4 +27,20 @@
     width: 30%;
     height: 2rem;
     margin: 1rem;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.wrapper>form>button:hover {
+    background: white;
+    border: 3px solid black;
+    color: black;
+}
+
+@media only screen and (max-height: 500px) {
+    .wrapper {
+        margin-top: 40%;
+    }
 }

@@ -69,3 +69,12 @@
         font-family: monospace;
     }
 }
+
+@media only screen and (max-height: 500px) {
+    .wrapper {
+        height: 50px;
+    }
+    .socialLinks img {
+        height: 1rem;
+    }
+}
