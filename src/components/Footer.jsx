@@ -4,6 +4,7 @@ import Github from "../assets/social-link/github.svg"
 import Twitter from "../assets/social-link/twitter.svg"
 import StackOF from "../assets/social-link/sof.svg"
 import Tg from "../assets/social-link/tg.svg"
+import CodeWars from "../assets/social-link/codewar.svg"
 // import Gmail from "../assets/social-link/gmail.svg"
 
 export default function Footer() {
@@ -42,6 +43,12 @@ export default function Footer() {
                     target="_blank"
                     rel="noreferrer">
                     <img src={StackOF} alt="stack overflow" />
+                </a>
+                <a
+                    href="https://www.codewars.com/users/marcikey"
+                    target="_blank"
+                    rel="noreferrer">
+                    <img src={CodeWars} alt="codewars" />
                 </a>
             </div>
             <div className={css.copyrightDesktop}>
